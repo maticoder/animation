@@ -1,0 +1,43 @@
+.todo-item {
+  padding: 25px 20px;
+  margin: 4px 0;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1), -1px -1px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1), -1px -1px 4px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo-item p {
+  position: relative;
+  font-weight: 400;
+  margin-left: 4px;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
+}
+
+.todo-item p span.line {
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: black;
+  -webkit-transition: background-color 1s ease, width 1s ease;
+  transition: background-color 1s ease, width 1s ease;
+  top: 50%;
+}
+
+.todo-item p.active {
+  color: #aaa;
+}
+
+.todo-item p.active span.line {
+  width: 100%;
+  background-color: #aaa;
+}
